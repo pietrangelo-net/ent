@@ -1,0 +1,12 @@
+name: ent
+description: Entando ent cli tool
+inputs:
+  ent-command: # id of input
+    description: 'ent command to run'
+    required: true
+    default: 'ent bundle pack --org=entando --stdout'
+runs:
+  using: 'docker'
+  image: docker://registry.hub.docker.com/entando/ent:7.1.3_k8s_1.24
+  entrypoint: ${{ inputs.ent-command }}
+
