@@ -5,9 +5,14 @@ inputs:
     description: 'ent command to run'
     required: true
     default: 'ent bundle pack --org=entando --stdout'
+  github-system-path:
+    description: 'the path for ent'
+    required: true
+    default: echo "/opt/ent/.entando/ent/v7.1.3/cli/v7.1.3/bin" >> $GITHUB_PATH
 runs:
   using: 'docker'
   image: docker://registry.hub.docker.com/entando/ent:7.1.3_gha
   args:
+    - ${{ inputs.github-system-path }}
     - ${{ inputs.ent-command }}
 
