@@ -4,10 +4,10 @@ inputs:
   ent-command: # id of input
     description: 'ent command to run'
     required: true
-    default: 'ls -la'
+    default: 'ent bundle pack --org=entando --stdout'
 runs:
   using: 'docker'
-  image: docker://registry.hub.docker.com/entando/ent:7.1.3_gha
+  image: 'Dockerfile'
   args:
     - ${{ inputs.ent-command }}
 
