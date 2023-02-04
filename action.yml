@@ -4,7 +4,8 @@ inputs:
   ent-command: # id of input
     description: 'ent command to run'
     required: true
-    default: 'ent bundle pack --org=entando --stdout'
+    #default: 'ent bundle pack --org=entando --stdout'
+    default: ""
 runs:
   using: 'docker'
   image: 'Dockerfile'
