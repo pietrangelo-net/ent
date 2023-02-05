@@ -19,4 +19,3 @@ echo "microservices-list=$microservices_list" >> $GITHUB_OUTPUT
 microservices_number=$(jq '.microservices | length' entando.json)
 echo "microservices-number=$microservices_number" >> $GITHUB_OUTPUT
 
-docker version
