@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # Set the version of ent
 ENT_VERSION="v7.1.3"
