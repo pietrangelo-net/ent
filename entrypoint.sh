@@ -7,4 +7,4 @@ ENT_VERSION="v7.1.3"
 #echo "/root/.entando/ent/$ENT_VERSION/cli/$ENT_VERSION/bin" >> $GITHUB_PATH
 
 # Run ent commands
-"$@"
+$@
