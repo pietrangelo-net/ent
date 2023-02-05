@@ -1,11 +1,14 @@
 name: ent
-description: Entando ent cli tool
+description: Entando ent build tool
 inputs:
   ent-command: # id of input
     description: 'ent command to run'
     required: true
     #default: 'ent bundle pack --org=entando --stdout'
     default: ""
+outputs:
+  bundle-name: # id of the output
+    description: 'The name of the bundle retrieved from entando.json'
 runs:
   using: 'docker'
   image: 'Dockerfile'
