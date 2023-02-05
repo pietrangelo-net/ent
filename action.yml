@@ -6,9 +6,17 @@ inputs:
     required: true
     #default: 'ent bundle pack --org=entando --stdout'
     default: ""
+
 outputs:
   bundle-name: # id of the output
     description: 'The name of the bundle retrieved from entando.json'
+
+  bundle-version: # id of the output
+    description: 'The version of the bundle to build'
+
+  microservices-list: # if of the output
+    description: 'The list of microservices to build'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
