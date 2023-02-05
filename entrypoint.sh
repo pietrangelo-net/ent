@@ -15,4 +15,6 @@ echo "bundle-version=$bundle_version" >> $GITHUB_OUTPUT
 microservices_list=$(jq -r '.microservices[] | .name' entando.json | tr -d '\n')
 echo "microservices-list=$microservices_list" >> $GITHUB_OUTPUT
 
-#
+# Get the number of microservices to build
+microservices_number=$(jq '.microservices | length' entando.json)
+echo "microservices-number=$microservices_number" >> $GITHUB_OUTPUT
